@@ -1,0 +1,9 @@
+<?php
+session_start();
+$id=$_GET['p'];
+if(isset($_SESSION['cart'][$id]))
+{
+   unset($_SESSION['cart'][$id]); 
+}
+header("Location:./addcart.php"); 
+?>
